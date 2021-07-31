@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+	background-color: #f5f5f5;
+}
+
+.container {
+	width: 50vw;
+	margin: 50px auto;
+	padding: 25px 10px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	text-align: center;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.heading {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5rem;
+}
+
+.textInput {
+	border: none;
+	border-bottom: 2px solid #ddd;
+	line-height: 1.2rem;
+	transition: 0.3s;
+	margin-bottom: 40px;
+	width: 50%;
+}
+
+.textInput:focus {
+	outline: none;
+	border-bottom: 2px solid #333;
+	transition: 0.3s;
+}
+
+.button {
+	background-color: #ffffff;
+	color: #9a4ef1;
+	border: 0.16em solid #9a4ef1;
+	border-radius: 2em;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	width: 50%;
+}
+
+.button:hover {
+	background-color: #9a4ef1;
+	color: #ffffff;
+	transition: 0.3s;
+}
+
+.emptyText {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5rem;
+}
+
+.message {
+	background-color: #71aeeb;
+	color:  #ffffff;
+	width: 25%;
+	padding: 8px;
+	border-radius: 2em;
+	margin: 15px 0px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.leaveButton {
+	background-color: #f5f5f5;
+	border-color: #aa0404;
+	color: #aa0404;
+	border: 0.16em solid #aa0404;
+	border-radius: 2em;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	width: 200px;
+	margin: 20px;
+}
+
+.leaveButton:hover {
+	background-color: #aa0404;
+	color: #ffffff;
+	transition: 0.3s;
+}
