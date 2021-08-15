@@ -20,6 +20,8 @@
         <input class="button" id="chat-message-submit" type="button" value="Send">
         {{ room_name|json_script:"room-name" }}
     </div>
+
+    {{ request.user.id|json_script:"user_id" }}
     <script src="{% static 'room.js' %}"></script>
 </body>
 </html>
