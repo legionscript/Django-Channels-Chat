@@ -1,7 +1,7 @@
 const chatLog = document.querySelector('#chat-log')
 const roomName = JSON.parse(document.getElementById('room-name').textContent);
 
-if (!chatLog.hasChildNodes()) {
+if (chatLog.childNodes.length <= 1) {
     const emptyText = document.createElement('h3')
     emptyText.id = 'emptyText'
     emptyText.innerText = 'No Messages'

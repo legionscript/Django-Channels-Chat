@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -8,15 +7,26 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    {% include 'chatrooms/nav.html' %}
     <a class="leaveButton" href="{% url 'index' %}">Leave Room</a>
 
     <div class="container">
-        <div id="chat-log"></div>
+        <div id="chat-log">
+            {% for chat in chats.all %}
+                {% if chat.user.id == request.user.id %}
+                    <div class="message sender">
+                        {{ chat.content }}
+                    </div>
+                {% else %}
+                    <div class="message receiver">
+                        {{ chat.content }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 
     <div class="container">
-        <input class="textInput" id="chat-message-input" type="text" size="100"><br>
+        <input class="textInput" id="chat-message-input" type="text" placeholder="Say something!"><br>
         <input class="button" id="chat-message-submit" type="button" value="Send">
         {{ room_name|json_script:"room-name" }}
     </div>
